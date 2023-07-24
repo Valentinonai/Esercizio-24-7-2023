@@ -63,7 +63,29 @@ header nav li a:hover {
 header nav li a::before {
   content: "\22c6\0020";
 }
-
+@media screen and (min-width: 1200px) {
+  header {
+    text-align: left;
+    padding-inline: 30px;
+    padding-block: 5px;
+  }
+  header div,
+  header nav,
+  header p {
+    display: inline-block;
+  }
+  header div img,
+  header div p {
+    margin: 0;
+    vertical-align: middle;
+  }
+  header div p {
+    margin-inline: 20px;
+  }
+  header nav {
+    margin-left: 45%;
+  }
+}
 /* MAIN */
 main {
   background-color: #fff;
@@ -89,7 +111,20 @@ section h2 {
     background-color: #999999;
   }
 }
-
+@media screen and (min-width: 1200px) {
+  main {
+    padding-inline: 30px;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  li {
+    line-height: 2;
+  }
+  main h2 {
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
 /* ELEMENTI NEL MAIN - ARTICLE */
 h1 {
   font-size: 2.6rem;
@@ -100,8 +135,13 @@ h1 {
 @media screen and (min-width: 576px) {
   h1 {
     font-size: 3.4rem;
-    margin-right: 150px;
+    margin-right: 180px;
     line-height: 1.2;
+  }
+}
+@media screen and (min-width: 663px) {
+  h1 {
+    margin-right: 300px;
   }
 }
 p,
@@ -173,6 +213,11 @@ tbody tr:last-of-type {
     margin: 60px auto;
   }
 }
+@media screen and (min-width: 1200px) {
+  table {
+    width: 80%;
+  }
+}
 /* FORM */
 input {
   padding: 5px;
@@ -198,7 +243,20 @@ button {
     font-size: 10px;
   }
 }
-
+@media screen and (min-width: 1200px) {
+  iframe,
+  section {
+    display: inline-block;
+    vertical-align: middle;
+    height: 180px;
+  }
+  iframe {
+    width: 49%;
+  }
+  section {
+    width: 49%;
+  }
+}
 /* ELEMENTI NELL' ASIDE */
 aside h2 {
   text-align: center;
@@ -224,7 +282,12 @@ aside div p:last-child {
   font-size: 0.8em;
   text-align: right;
 }
-
+@media screen and (min-width: 1200px) {
+  aside div {
+    display: inline-block;
+    width: 33%;
+  }
+}
 /* FOOTER */
 footer {
   background: rgb(53, 53, 53);
@@ -241,5 +304,26 @@ footer a {
 @media screen and (min-width: 576px) {
   footer {
     font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  footer address {
+    padding-inline: 25%;
+  }
+}
+
+@media print {
+  header,
+  iframe,
+  aside,
+  footer,
+  section {
+    display: none;
+  }
+  main {
+    box-shadow: none;
+  }
+  body {
+    font-size: 23px;
   }
 }
