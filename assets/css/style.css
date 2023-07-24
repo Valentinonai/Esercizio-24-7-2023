@@ -132,6 +132,14 @@ h1 {
   letter-spacing: -0.03em;
   margin-bottom: 0.7em;
 }
+article img {
+  display: block;
+  border: 5px solid #0094b9;
+}
+article div {
+  border: 5px solid #9c1d60;
+  display: inline-block;
+}
 @media screen and (min-width: 576px) {
   h1 {
     font-size: 3.4rem;
@@ -255,6 +263,8 @@ button {
   }
   section {
     width: 49%;
+    margin-left: -4px;
+    border-radius: 20px;
   }
 }
 /* ELEMENTI NELL' ASIDE */
@@ -286,6 +296,7 @@ aside div p:last-child {
   aside div {
     display: inline-block;
     width: 33%;
+    margin-left: -4px;
   }
 }
 /* FOOTER */
@@ -310,6 +321,12 @@ footer a {
   footer address {
     padding-inline: 25%;
   }
+  header,
+  main,
+  footer {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
 }
 
 @media print {
@@ -325,5 +342,13 @@ footer a {
   }
   body {
     font-size: 23px;
+  }
+  article div:first-of-type {
+    float: left;
+    margin-right: 20px;
+  }
+  article p:nth-child(3) {
+    display: inline-block;
+    clear: left;
   }
 }
